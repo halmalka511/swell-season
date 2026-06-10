@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Swell Season at Wapato Point — Welcome Booklet</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --sand: #f5ede0;
+    --cream: #faf6f0;
+    --lake: #4a7fa5;
+    --lake-deep: #2d5a7a;
+    --lake-light: #8bbcd4;
+    --sage: #7a9e8a;
+    --warm-brown: #8b6f52;
+    --text: #2c2825;
+    --text-light: #6b5c4e;
+    --accent: #c8834a;
+    --white: #ffffff;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Jost', sans-serif;
+    background: var(--sand);
+    color: var(--text);
+    font-weight: 300;
+    line-height: 1.7;
+  }
+
+  @media print {
+    body { background: white; }
+    .page { page-break-after: always; box-shadow: none !important; margin: 0 !important; border-radius: 0 !important; }
+    .no-print { display: none; }
+  }
+
+  .booklet {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .page {
+    background: var(--cream);
+    margin-bottom: 32px;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 4px 40px rgba(44,40,37,0.12);
+    position: relative;
+  }
+
+  /* ── COVER ─────────────────────────────── */
+  .cover {
+    min-height: 600px;
+    background: linear-gradient(160deg, var(--lake-deep) 0%, var(--lake) 50%, var(--lake-light) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cover::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  /* Wave decoration */
+  .cover-wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+  }
+
+  .cover-eyebrow {
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 24px;
+  }
+
+  .cover-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(48px, 8vw, 72px);
+    font-weight: 300;
+    color: white;
+    line-height: 1.1;
+    margin-bottom: 8px;
+  }
+
+  .cover-title em {
+    font-style: italic;
+    font-weight: 300;
+    display: block;
+  }
+
+  .cover-sub {
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.7);
+    margin-top: 16px;
+    margin-bottom: 40px;
+  }
+
+  .cover-divider {
+    width: 60px;
+    height: 1px;
+    background: rgba(255,255,255,0.4);
+    margin: 0 auto 32px;
+  }
+
+  .cover-address {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 300;
+    font-style: italic;
+    color: rgba(255,255,255,0.85);
+  }
+
+  /* ── INFO GRID ──────────────────────────── */
+  .info-page { padding: 0; }
+
+  .info-header {
+    background: var(--lake-deep);
+    color: white;
+    padding: 32px 40px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .info-header h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 300;
+  }
+
+  .info-header .header-icon {
+    font-size: 24px;
+    opacity: 0.7;
+  }
+
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+
+  .info-card {
+    padding: 32px 36px;
+    border-bottom: 1px solid rgba(44,40,37,0.08);
+    border-right: 1px solid rgba(44,40,37,0.08);
+  }
+
+  .info-card:nth-child(even) { border-right: none; }
+  .info-card:nth-last-child(-n+2) { border-bottom: none; }
+
+  .info-card-label {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--lake);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .info-card-label::before {
+    content: '';
+    width: 20px;
+    height: 1px;
+    background: var(--lake);
+  }
+
+  .info-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 8px;
+    color: var(--text);
+  }
+
+  .info-card p, .info-card li {
+    font-size: 14px;
+    color: var(--text-light);
+    line-height: 1.8;
+  }
+
+  .info-card ul { list-style: none; }
+  .info-card ul li::before {
+    content: '—';
+    margin-right: 8px;
+    color: var(--accent);
+    font-size: 12px;
+  }
+
+  .highlight-box {
+    margin: 24px 36px;
+    padding: 20px 24px;
+    background: linear-gradient(135deg, var(--lake-deep), var(--lake));
+    border-radius: 2px;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .highlight-box p {
+    font-size: 13px;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.9);
+  }
+
+  .highlight-box strong {
+    font-weight: 500;
+    color: white;
+  }
+
+  /* ── SECTION PAGES ──────────────────────── */
+  .section-page { padding: 48px 40px; }
+
+  .section-eyebrow {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--lake);
+    margin-bottom: 8px;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px;
+    font-weight: 300;
+    line-height: 1.1;
+    margin-bottom: 8px;
+    color: var(--text);
+  }
+
+  .section-title em {
+    font-style: italic;
+    color: var(--lake);
+  }
+
+  .section-intro {
+    font-size: 15px;
+    color: var(--text-light);
+    max-width: 520px;
+    margin-bottom: 36px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid rgba(44,40,37,0.1);
+  }
+
+  /* Amenities */
+  .amenity-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .amenity-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    padding: 16px;
+    background: var(--sand);
+    border-radius: 2px;
+  }
+
+  .amenity-icon { font-size: 20px; }
+
+  .amenity-name {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    color: var(--text);
+  }
+
+  /* Rules */
+  .rules-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  .rules-block h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--text);
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(44,40,37,0.1);
+  }
+
+  .rule-item {
+    display: flex;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(44,40,37,0.06);
+    font-size: 14px;
+    color: var(--text-light);
+    align-items: flex-start;
+  }
+
+  .rule-item:last-child { border-bottom: none; }
+
+  .rule-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    flex-shrink: 0;
+    margin-top: 8px;
+  }
+
+  .rule-important {
+    background: rgba(200, 131, 74, 0.08);
+    border-left: 3px solid var(--accent);
+    padding: 14px 16px;
+    border-radius: 0 2px 2px 0;
+    margin-top: 12px;
+    font-size: 13px;
+    color: var(--text-light);
+  }
+
+  /* Departure */
+  .checklist {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .checklist-item {
+    display: flex;
+    gap: 16px;
+    padding: 14px 16px;
+    align-items: flex-start;
+    background: transparent;
+    transition: background 0.2s;
+  }
+
+  .checklist-item:nth-child(even) {
+    background: rgba(74,127,165,0.04);
+  }
+
+  .check-box {
+    width: 20px;
+    height: 20px;
+    border: 1.5px solid var(--lake);
+    border-radius: 2px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .checklist-item p {
+    font-size: 14px;
+    color: var(--text-light);
+    line-height: 1.5;
+  }
+
+  /* Activities */
+  .activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .activity-item {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    background: var(--sand);
+    border-radius: 2px;
+    align-items: flex-start;
+  }
+
+  .activity-icon {
+    font-size: 28px;
+    flex-shrink: 0;
+    width: 44px;
+    text-align: center;
+  }
+
+  .activity-content h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+
+  .activity-content p {
+    font-size: 13px;
+    color: var(--text-light);
+    line-height: 1.7;
+  }
+
+  /* Restaurant cards */
+  .restaurant-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .restaurant-card {
+    padding: 20px;
+    background: var(--sand);
+    border-radius: 2px;
+    border-top: 2px solid var(--lake-light);
+  }
+
+  .restaurant-card h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+
+  .restaurant-tag {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--lake);
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+
+  .restaurant-card p {
+    font-size: 13px;
+    color: var(--text-light);
+    line-height: 1.7;
+  }
+
+  /* Winery cards */
+  .winery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .winery-card {
+    padding: 20px;
+    background: var(--sand);
+    border-radius: 2px;
+    border-top: 2px solid var(--sage);
+  }
+
+  .winery-card h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+
+  .winery-tag {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--sage);
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+
+  .winery-card p {
+    font-size: 13px;
+    color: var(--text-light);
+    line-height: 1.7;
+  }
+
+  /* Fun facts */
+  .facts-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .fact-card {
+    padding: 20px;
+    background: var(--sand);
+    border-radius: 2px;
+    position: relative;
+  }
+
+  .fact-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    font-weight: 300;
+    color: var(--lake-light);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .fact-card p {
+    font-size: 13px;
+    color: var(--text-light);
+    line-height: 1.7;
+  }
+
+  /* Closing */
+  .closing {
+    min-height: 400px;
+    background: linear-gradient(150deg, var(--warm-brown) 0%, var(--accent) 60%, #d4a06a 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .closing::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  .closing-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 54px;
+    font-weight: 300;
+    color: white;
+    line-height: 1.1;
+    margin-bottom: 24px;
+  }
+
+  .closing-title em { font-style: italic; }
+
+  .closing p {
+    font-size: 16px;
+    color: rgba(255,255,255,0.85);
+    max-width: 380px;
+    margin-bottom: 32px;
+    line-height: 1.8;
+  }
+
+  .closing-contact {
+    background: rgba(255,255,255,0.15);
+    padding: 20px 32px;
+    border-radius: 2px;
+    backdrop-filter: blur(10px);
+  }
+
+  .closing-contact p {
+    font-size: 14px;
+    color: white;
+    margin-bottom: 4px;
+  }
+
+  .closing-contact strong {
+    font-weight: 500;
+    font-size: 18px;
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  .print-btn {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: var(--lake-deep);
+    color: white;
+    border: none;
+    padding: 14px 24px;
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 2px;
+    box-shadow: 0 4px 20px rgba(45,90,122,0.4);
+    transition: background 0.2s;
+  }
+
+  .print-btn:hover { background: var(--lake); }
+
+  @media (max-width: 600px) {
+    .booklet { padding: 10px; }
+    .info-grid, .rules-columns, .restaurant-grid, .winery-grid, .facts-grid, .amenity-grid { grid-template-columns: 1fr; }
+    .info-card:nth-child(even) { border-right: 1px solid rgba(44,40,37,0.08); }
+    .section-page { padding: 32px 24px; }
+    .info-header { padding: 24px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="booklet">
+
+  <!-- COVER -->
+  <div class="page">
+    <div class="cover">
+      <div class="cover-eyebrow">Welcome to</div>
+      <div class="cover-title">The Swell Season<em>at Wapato Point</em></div>
+      <div class="cover-sub">Manson, Washington</div>
+      <div class="cover-divider"></div>
+      <div class="cover-address">511A Halmalka Ct · Manson, WA 98831</div>
+      <svg class="cover-wave" viewBox="0 0 800 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,40 C200,80 400,0 600,40 C700,60 750,50 800,40 L800,80 L0,80 Z" fill="#faf6f0"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- QUICK INFO -->
+  <div class="page info-page">
+    <div class="info-header">
+      <span class="header-icon">✦</span>
+      <h2>Everything You Need to Know</h2>
+    </div>
+    <div class="info-grid">
+      <div class="info-card">
+        <div class="info-card-label">WiFi</div>
+        <h3>Stay Connected</h3>
+        <p>Network: <strong>WPH511A</strong><br>Password: <strong>SwellSeason1!</strong></p>
+      </div>
+      <div class="info-card">
+        <div class="info-card-label">Check-In & Out</div>
+        <h3>Your Stay</h3>
+        <p>Check-in after <strong>4:00 PM</strong><br>Check-out before <strong>10:00 AM</strong></p>
+        <p style="margin-top:8px; font-size:13px; color:var(--text-light);">Don't forget to <strong>check in at the office</strong> when you arrive — they'll provide your parking passes and pool keys.</p>
+      </div>
+      <div class="info-card">
+        <div class="info-card-label">Contact</div>
+        <h3>Need Help?</h3>
+        <p>Your hosts are <strong>Jody and Kelsey</strong>. Please contact us through your booking app — we always check our messages! For immediate and urgent assistance only, please text Kelsey at <strong>206-909-6743</strong>.</p>
+        <p style="margin-top:10px; font-size:13px; color:var(--text-light);">We hope you enjoy your stay and want to return again and again! To save on platform fees, book direct with us by contacting us at <strong>halmalka511@gmail.com</strong>. We would love to host you again.</p>
+      </div>
+      <div class="info-card">
+        <div class="info-card-label">Parking</div>
+        <h3>Your Space</h3>
+        <p>Spacious driveway parking available. Garage access is not provided for guests.</p>
+      </div>
+    </div>
+    <div class="highlight-box">
+      <span style="font-size:28px;">🏖️</span>
+      <p><strong>You're at the resort!</strong> Most Wapato Point amenities are included with your stay — indoor & outdoor pools, pickleball courts, beach access, gym, and more! The recreation kiosk is on the beach next to the mini golf course. You can add a credit card to your stay when you check in at the office for small rental charges at the kiosk such as bikes, paddleboards and crafts.</p>
+    </div>
+  </div>
+
+  <!-- AMENITIES -->
+  <div class="page section-page">
+    <div class="section-eyebrow">Your Home</div>
+    <h2 class="section-title">The Condo &<em>Resort Amenities</em></h2>
+    <p class="section-intro">A spacious 3-bedroom, 2-bath condo recently refurnished with thoughtful touches for your comfort. One master bedroom upstairs, two bedrooms downstairs opening to a grassy lawn. Plus access to everything Wapato Point has to offer.</p>
+
+    <h3 style="font-family:'Cormorant Garamond',serif; font-size:20px; font-weight:400; margin-bottom:16px; color:var(--text);">In the Condo</h3>
+    <div class="amenity-grid" style="margin-bottom:28px;">
+      <div class="amenity-item"><span class="amenity-icon">🛏️</span><span class="amenity-name">3 Bedrooms / 6 Beds</span></div>
+      <div class="amenity-item"><span class="amenity-icon">🛁</span><span class="amenity-name">2 Full Bathrooms</span></div>
+      <div class="amenity-item"><span class="amenity-icon">🍳</span><span class="amenity-name">Full Kitchen</span></div>
+      <div class="amenity-item"><span class="amenity-icon">📶</span><span class="amenity-name">High-Speed WiFi</span></div>
+      <div class="amenity-item"><span class="amenity-icon">🔥</span><span class="amenity-name">BBQ Grill</span></div>
+      <div class="amenity-item"><span class="amenity-icon">🪑</span><span class="amenity-name">Balcony + Hammocks</span></div>
+      <div class="amenity-item"><span class="amenity-icon">🖥️</span><span class="amenity-name">Dedicated Workspace</span></div>
+      <div class="amenity-item"><span class="amenity-icon">🌄</span><span class="amenity-name">Lake & Mountain Views</span></div>
+      <div class="amenity-item"><span class="amenity-icon">🅿️</span><span class="amenity-name">Free Driveway Parking</span></div>
+    </div>
+
+    <h3 style="font-family:'Cormorant Garamond',serif; font-size:20px; font-weight:400; margin-bottom:16px; color:var(--text);">At the Resort</h3>
+    <div class="amenity-grid">
+      <div class="amenity-item"><span class="amenity-icon">🏊</span><span class="amenity-name">Indoor + Outdoor Pools</span></div>
+      <div class="amenity-item"><span class="amenity-icon">🎾</span><span class="amenity-name">Pickleball & Tennis Courts</span></div>
+      <div class="amenity-item"><span class="amenity-icon">🏖️</span><span class="amenity-name">Private Beach Access</span></div>
+      <div class="amenity-item"><span class="amenity-icon">🚣</span><span class="amenity-name">Kayak & Paddleboard Rental</span></div>
+      <div class="amenity-item"><span class="amenity-icon">🚲</span><span class="amenity-name">Bike Rentals</span></div>
+      <div class="amenity-item"><span class="amenity-icon">⛳</span><span class="amenity-name">Mini Golf Course</span></div>
+      <div class="amenity-item"><span class="amenity-icon">💪</span><span class="amenity-name">Fitness Center</span></div>
+      <div class="amenity-item"><span class="amenity-icon">🐟</span><span class="amenity-name">Seasonal Trout Pond</span></div>
+      <div class="amenity-item"><span class="amenity-icon">⛵</span><span class="amenity-name">Boat & Jet Ski Rental</span></div>
+    </div>
+  </div>
+
+  <!-- HOUSE RULES -->
+  <div class="page section-page">
+    <div class="section-eyebrow">House Rules</div>
+    <h2 class="section-title">Guidelines &<em>Good Vibes</em></h2>
+    <p class="section-intro">We want your stay to be wonderful. These guidelines help us keep the condo in great shape for every guest. Thank you for your care and respect.</p>
+
+    <div class="rules-columns">
+      <div class="rules-block">
+        <h3>General</h3>
+        <div class="rule-item"><div class="rule-dot"></div><div>Generally, please treat the whole place with care! We love this space and hope you do too. Let's keep it nice, clean and without damage.</div></div>
+        <div class="rule-item"><div class="rule-dot"></div><div>No pets of any kind on the premises</div></div>
+        <div class="rule-item"><div class="rule-dot"></div><div>No smoking of any kind — indoors or outdoors (cigarettes, cigars, e-cigarettes, marijuana, etc.)</div></div>
+        <div class="rule-item"><div class="rule-dot"></div><div>Maximum occupancy: <strong>9 guests</strong></div></div>
+        <div class="rule-item"><div class="rule-dot"></div><div>Quiet hours: <strong>10 PM to 8 AM</strong> — keep noise within the property</div></div>
+        <div class="rule-item"><div class="rule-dot"></div><div>Please be mindful of what goes down drains</div></div>
+
+        <h3 style="margin-top:24px;">Interior</h3>
+        <div class="rule-item"><div class="rule-dot"></div><div>Remove shoes before entering the house</div></div>
+        <div class="rule-item"><div class="rule-dot"></div><div>Use the <strong>foot washing tub outside</strong> before entering to help keep sand inside at a minimum</div></div>
+        <div class="rule-item"><div class="rule-dot"></div><div>Do not set A/C below 70°F <em style="font-size:13px;">(it should be plenty cool — colder settings can freeze and burst the pipes!)</em></div></div>
+        <div class="rule-item"><div class="rule-dot"></div><div>Do not move furniture</div></div>
+        <div class="rule-item"><div class="rule-dot"></div><div>No wet bathing suits on furniture</div></div>
+        <div class="rule-item"><div class="rule-dot"></div><div>Use pool/beach towels (not bath towels) at water</div></div>
+        <div class="rule-item"><div class="rule-dot"></div><div>No pots or pans on the barbeque</div></div>
+        <div class="rule-item"><div class="rule-dot"></div><div>Fireplace is not available for guest use <em style="font-size:13px;">(it will smoke up the house!)</em></div></div>
+      </div>
+
+      <div class="rules-block">
+        <h3>Exterior</h3>
+        <div class="rule-item"><div class="rule-dot"></div><div>Please do your best to use the BBQ brush to clean off excess food between uses</div></div>
+        <div class="rule-item"><div class="rule-dot"></div><div>Please do not allow multiple people in one hammock at a time — we love providing these but they do have a weight limit!</div></div>
+        <div class="rule-item"><div class="rule-dot"></div><div>Evenings can be windy — secure all outdoor items</div></div>
+
+        <div class="rule-important">⚠️ Violations of the no-pets or no-smoking policies will result in a minimum <strong>$500 cleaning fee</strong> and possible eviction. Exceeding the maximum occupancy or hosting unauthorized parties will also result in immediate eviction and additional fees.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DEPARTURE -->
+  <div class="page section-page">
+    <div class="section-eyebrow">Departure</div>
+    <h2 class="section-title">Check-Out<em>Instructions</em></h2>
+    <p class="section-intro">Check-out is at <strong>10:00 AM</strong>. Before you head out, please take a few minutes to work through this checklist. Don't forget to peek under beds, in closets, and in dresser drawers for any belongings!</p>
+
+    <div class="checklist">
+      <div class="checklist-item"><div class="check-box"></div><p>Place all dishes in the dishwasher and <strong>start the cycle</strong></p></div>
+      <div class="checklist-item"><div class="check-box"></div><p>Strip all <strong>used beds</strong> and pile the used blankets and linens next to the bed in each room</p></div>
+      <div class="checklist-item"><div class="check-box"></div><p>Place all used towels (bath and pool) in the laundry room and <strong>start one load</strong></p></div>
+      <div class="checklist-item"><div class="check-box"></div><p>Remove all food items from the fridge and pantry</p></div>
+      <div class="checklist-item"><div class="check-box"></div><p>Remove all garbage including from <strong>bathrooms</strong> and place in the outside garbage cans — <strong>no recycling separation needed in this area</strong></p></div>
+      <div class="checklist-item"><div class="check-box"></div><p>Turn off all lights, fans, TVs, and other appliances</p></div>
+      <div class="checklist-item"><div class="check-box"></div><p>Close and lock all doors</p></div>
+    </div>
+
+    <div class="highlight-box" style="margin: 24px 0 0;">
+      <span style="font-size:24px;">💌</span>
+      <p>Left something behind? No worries — <strong>email us</strong> when you get home and we'll do our best to reunite you with your belongings.</p>
+    </div>
+  </div>
+
+  <!-- ACTIVITIES -->
+  <div class="page section-page">
+    <div class="section-eyebrow">Explore</div>
+    <h2 class="section-title">Things to Do<em>Around the Lake</em></h2>
+    <p class="section-intro">Lake Chelan is a world unto itself — 50.5 miles of pristine glacial water, over 300 sunny days a year, and adventures for every kind of traveler.</p>
+
+    <div class="activity-list">
+      <div class="activity-item">
+        <div class="activity-icon">⛵</div>
+        <div class="activity-content">
+          <h4>Boating & Water Sports</h4>
+          <p>Rent a boat or jet ski right at Wapato Point or from Mill Bay Marine in Manson. Kayaks, canoes, paddleboards, and pedal boats are also available at the resort Kiosk on the beach. Lake Chelan is over 50 miles of pristine blue water perfect for wakeboarding, water skiing, and scenic cruising.</p>
+        </div>
+      </div>
+      <div class="activity-item">
+        <div class="activity-icon">🚢</div>
+        <div class="activity-content">
+          <h4>Lady of the Lake — Stehekin</h4>
+          <p>Take the famous ferry to Stehekin, a remote community of ~75 people accessible only by boat, float plane, or a long hike. The ride itself is stunning. Grab a pastry at the Stehekin Pastry Company — one of the most talked-about bakeries in the Northwest.</p>
+        </div>
+      </div>
+      <div class="activity-item">
+        <div class="activity-icon">💦</div>
+        <div class="activity-content">
+          <h4>Slidewaters Waterpark</h4>
+          <p>Located in downtown Chelan, Slidewaters is a beloved family waterpark with thrilling slides and pools — perfect for a hot summer afternoon. Open seasonally; check their website for current hours.</p>
+        </div>
+      </div>
+      <div class="activity-item">
+        <div class="activity-icon">🥾</div>
+        <div class="activity-content">
+          <h4>Hiking & State Parks</h4>
+          <p>Lake Chelan State Park is just 2 miles away. Twenty-Five Mile Creek State Park (9 miles) offers more remote hiking and camping. Both feature beautiful lake views and trails suitable for all fitness levels.</p>
+        </div>
+      </div>
+      <div class="activity-item">
+        <div class="activity-icon">🎪</div>
+        <div class="activity-content">
+          <h4>Manson Farmers Market</h4>
+          <p>Wednesday and Saturday mornings 8:30 AM – Noon (June–September) at the Manson Grange Hall on Wapato Way. Fresh local produce, baked goods, flowers, and artisan goods from the valley's talented farmers and makers.</p>
+        </div>
+      </div>
+      <div class="activity-item">
+        <div class="activity-icon">🎿</div>
+        <div class="activity-content">
+          <h4>Winter Fun (Seasonal)</h4>
+          <p>Echo Ridge Nordic Ski Area offers cross-country skiing, snowshoeing, sledding and tubing just up the road. Over 170 miles of groomed snowmobile trails make this area equally magical in the winter months.</p>
+        </div>
+      </div>
+      <div class="activity-item">
+        <div class="activity-icon">🎰</div>
+        <div class="activity-content">
+          <h4>12 Tribes Lake Chelan Casino</h4>
+          <p>The local casino offers slots, table games, dining, and live entertainment — a fun evening option rain or shine.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RESTAURANTS -->
+  <div class="page section-page">
+    <div class="section-eyebrow">Dining</div>
+    <h2 class="section-title">Where to<em>Eat & Drink</em></h2>
+    <p class="section-intro">From blueberry farm breakfasts to lake-view fine dining, the Manson–Chelan corridor has something for every appetite. Downtown Manson is less than a mile away.</p>
+
+    <h3 style="font-family:'Cormorant Garamond',serif; font-size:20px; font-weight:400; margin-bottom:16px; color:var(--text);">In & Around Manson</h3>
+    <div class="restaurant-grid" style="margin-bottom:24px;">
+      <div class="restaurant-card">
+        <h4>Blueberry Hill Farm</h4>
+        <span class="restaurant-tag">Breakfast & Lunch · Farm Café</span>
+        <p>A local gem and a must-visit. Situated on a working blueberry farm, the café serves legendary blueberry cinnamon rolls, hearty egg scrambles, and fresh baked goods. U-pick blueberries in summer. Arrive early — it fills up fast!</p>
+      </div>
+      <div class="restaurant-card">
+        <h4>Lake Chelan Brewery</h4>
+        <span class="restaurant-tag">Craft Beer & Food · Manson</span>
+        <p>Downtown Manson's beloved gathering spot. Craft beers made with local ingredients, plus a diverse food menu — known for their Philly cheesesteak, Reuben, and onion rings. Grab 4-packs to go for the lake.</p>
+      </div>
+      <div class="restaurant-card">
+        <h4>Mi Paloma</h4>
+        <span class="restaurant-tag">Mexican · Manson</span>
+        <p>Family recipes served in a cheerful downtown Manson spot. Famous for their Baja fried fish tacos, mango margaritas, and vegan/vegetarian options. Huge portions — come hungry. Seasonal hours.</p>
+      </div>
+      <div class="restaurant-card">
+        <h4>Local Myth Pizza</h4>
+        <span class="restaurant-tag">Artisan Pizza · Manson & Chelan</span>
+        <p>Award-winning hand-crafted artisan pizzas and calzones, fresh salads, housemade desserts, and 20 local NW beers and ciders on tap. A valley staple with locations in both Manson and Chelan.</p>
+      </div>
+      <div class="restaurant-card">
+        <h4>Tapped Out Sports Bar</h4>
+        <span class="restaurant-tag">Bar & Grill · Manson</span>
+        <p>A fresh, energetic gathering space in downtown Manson with great drinks, live sports coverage, and a friendly atmosphere. Great for game nights or casual evenings with the group.</p>
+      </div>
+      <div class="restaurant-card">
+        <h4>Lakeview Drive-In</h4>
+        <span class="restaurant-tag">Classic Drive-In · Manson Hwy</span>
+        <p>Famous fries by the bucket with housemade seasoning salt, fresh burgers, homemade tartar sauce, and hand-dipped milkshakes. A fun, nostalgic stop near Don Morse Park. Seasonal — check hours.</p>
+      </div>
+    </div>
+
+    <h3 style="font-family:'Cormorant Garamond',serif; font-size:20px; font-weight:400; margin-bottom:16px; color:var(--text);">In Chelan (~15 min away)</h3>
+    <div class="restaurant-grid">
+      <div class="restaurant-card">
+        <h4>Layla's Bar + Kitchen</h4>
+        <span class="restaurant-tag">Upscale Casual · Downtown Chelan</span>
+        <p>A local favorite for late lunch or dinner. Shareable tapas, classic cocktails, unique menu, and full bar. Consistently praised for friendly staff and a lively atmosphere.</p>
+      </div>
+      <div class="restaurant-card">
+        <h4>The Albatross</h4>
+        <span class="restaurant-tag">American · Chelan</span>
+        <p>Highly rated with rave reviews for exceptional food and service. A well-rounded dining experience for a special night out — reserve ahead during summer.</p>
+      </div>
+      <div class="restaurant-card">
+        <h4>Sorrento's Ristorante</h4>
+        <span class="restaurant-tag">Italian · South Shore</span>
+        <p>Named one of the <em>Top 100 Scenic View Restaurants in America</em> by OpenTable. Italian cuisine on the south shore of Lake Chelan — the views alone are worth the trip.</p>
+      </div>
+      <div class="restaurant-card">
+        <h4>Apple Cup Café</h4>
+        <span class="restaurant-tag">Breakfast & Lunch · Chelan</span>
+        <p>A classic Chelan breakfast spot loved by locals and visitors alike. Hearty portions, friendly service, and a great place to fuel up before a day on the water.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- WINERIES -->
+  <div class="page section-page">
+    <div class="section-eyebrow">Wine Country</div>
+    <h2 class="section-title">Wineries &<em>Tasting Rooms</em></h2>
+    <p class="section-intro">With over 30 wineries in the Lake Chelan AVA, you could spend a whole vacation just sipping. The North Shore near Manson is especially rich — many are within a short drive or even walkable from downtown Manson.</p>
+
+    <h3 style="font-family:'Cormorant Garamond',serif; font-size:20px; font-weight:400; margin-bottom:16px; color:var(--text);">North Shore & Manson Favorites</h3>
+    <div class="winery-grid" style="margin-bottom:24px;">
+      <div class="winery-card">
+        <h4>Benson Vineyards</h4>
+        <span class="winery-tag">North Shore Hillside · Estate Grown</span>
+        <p>Perched atop the hills with sweeping panoramic views of Lake Chelan. 100% estate-grown in a stunning Mediterranean-inspired setting. Known for bold Cabernet Sauvignon and Merlot. One of the most beautiful tasting experiences in the valley.</p>
+      </div>
+      <div class="winery-card">
+        <h4>Cairdeas Winery</h4>
+        <span class="winery-tag">Rhône-Style · Downtown Manson</span>
+        <p>The Gaelic word for "friendship" — and the vibe here delivers. Rhône-style wines (Syrah, Grenache, Viognier) crafted in small batches with lake views and warm hospitality. A top pick among serious wine lovers.</p>
+      </div>
+      <div class="winery-card">
+        <h4>Hard Row to Hoe</h4>
+        <span class="winery-tag">North Shore · Ask About the Name!</span>
+        <p>One of Washington's <em>Top 22 Tasting Rooms</em>. The story behind the name is one of Chelan's most entertaining tales — ask the staff! Estate vineyard wines with stunning lake views and a fun, welcoming atmosphere.</p>
+      </div>
+      <div class="winery-card">
+        <h4>Radiance Winery</h4>
+        <span class="winery-tag">North Shore · Family Owned</span>
+        <p>Award-winning wines crafted with traditional techniques in a beautifully restored 100-year-old barn and scenic patio. Overlooks Lake Chelan and benefits from over 300 sunny days a year. A peaceful, gorgeous tasting experience.</p>
+      </div>
+      <div class="winery-card">
+        <h4>Chelan Ridge Winery</h4>
+        <span class="winery-tag">North Shore · Gravity-Flow Estate</span>
+        <p>Family-owned gravity-flow winery producing classically-styled, handcrafted wines in small batches. Estate premium grapes, beautiful North Shore setting. They also have a Woodinville tasting room for the off-season.</p>
+      </div>
+      <div class="winery-card">
+        <h4>Succession Wines</h4>
+        <span class="winery-tag">North Shore · Inspiring Story</span>
+        <p>Founded after a wildfire prompted owners Brock and Erica Lindsay to pursue their dream. Regularly sells out of each vintage. Great patio, impressive wines, and one of the most loyal followings in the valley.</p>
+      </div>
+      <div class="winery-card">
+        <h4>Diffraction Wine</h4>
+        <span class="winery-tag">Downtown Manson · Family Friendly</span>
+        <p>Made by the Cairdeas team — approachable, everyday wines perfect for boat days and pizza nights. Retro arcade games, ice cream, and a laid-back family-friendly atmosphere. Grab a bottle to go!</p>
+      </div>
+      <div class="winery-card">
+        <h4>VIBE Cellars</h4>
+        <span class="winery-tag">Downtown Manson · Italian-Inspired</span>
+        <p>Award-winning winery with roots in Northern Italy. Specializes in Italian-style varietals and French Bordeaux-style reds. Tasting room right on Manson's main street with great lake views from the patio.</p>
+      </div>
+    </div>
+
+    <div class="highlight-box">
+      <span style="font-size:24px;">🍷</span>
+      <p><strong>Pro tip:</strong> Wapato Point Cellars and Wine Maker's Grill is located right at the other end of the resort — an easy stroll for a tasting or dinner without getting in the car. The Manson Chamber also coordinates <strong>limo wine tours</strong> if you want to make a day of it!</p>
+    </div>
+  </div>
+
+  <!-- FUN FACTS -->
+  <div class="page section-page">
+    <div class="section-eyebrow">Did You Know?</div>
+    <h2 class="section-title">About<em>Lake Chelan</em></h2>
+    <p class="section-intro">50.5 miles of lake surrounded by vineyards, mountains, and small-town charm — with a few surprises along the way.</p>
+
+    <div class="facts-grid">
+      <div class="fact-card">
+        <div class="fact-number">1,486<span style="font-size:24px;">ft</span></div>
+        <p>Lake Chelan's maximum depth, making it one of the deepest lakes in the world and the deepest in Washington State.</p>
+      </div>
+      <div class="fact-card">
+        <div class="fact-number">4<span style="font-size:24px;">th</span></div>
+        <p>Lake Chelan ranks as the 4th cleanest lake in the United States, behind only Lake Tahoe, Crater Lake, and Lake Coeur d'Alene.</p>
+      </div>
+      <div class="fact-card">
+        <div class="fact-number">300+</div>
+        <p>Days of sunshine per year in Chelan — more than Miami! That's why the fruit orchards and wine grapes thrive here.</p>
+      </div>
+      <div class="fact-card">
+        <div class="fact-number">30+</div>
+        <p>Wineries in the Lake Chelan AVA. The young volcanic soils and four distinct seasons produce award-winning vintages year after year.</p>
+      </div>
+      <div class="fact-card">
+        <div class="fact-number">25k</div>
+        <p>Population swells from ~4,000 residents to 25,000 people during peak summer months. You've picked a great place to be!</p>
+      </div>
+      <div class="fact-card">
+        <div class="fact-number">1914</div>
+        <p>The Chelan Ruby Theater opened — one of the oldest continuously running movie theaters in the entire Pacific Northwest.</p>
+      </div>
+    </div>
+
+    <div style="margin-top:24px; padding:20px; background:var(--sand); border-radius:2px; display:flex; gap:16px; align-items:flex-start;">
+      <span style="font-size:28px; flex-shrink:0;">🐊</span>
+      <div>
+        <p style="font-weight:500; font-size:14px; color:var(--text); margin-bottom:4px;">Meet Ogopogo</p>
+        <p style="font-size:13px; color:var(--text-light);">Local legend says a lake monster named Ogopogo prowls the depths of Lake Chelan — with the body and legs of an alligator and the head and eyes of a serpent. Keep your eyes peeled on those early morning paddles...</p>
+      </div>
+    </div>
+
+    <div style="margin-top:16px; padding:20px; background:var(--sand); border-radius:2px; display:flex; gap:16px; align-items:flex-start;">
+      <span style="font-size:28px; flex-shrink:0;">🏔️</span>
+      <div>
+        <p style="font-weight:500; font-size:14px; color:var(--text); margin-bottom:4px;">The Name "Chelan"</p>
+        <p style="font-size:13px; color:var(--text-light);">Chelan is a Salish Indian word ("Tsi-Laan") meaning "Deep Water" — fitting for a lake with nearly 1,500 feet of depth. The town's sister city is Tojo, Hyōgo, Japan.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CLOSING -->
+  <div class="page">
+    <div class="closing">
+      <div class="closing-title">Enjoy every<em>moment.</em></div>
+      <p>We hope your time at The Swell Season at Wapato Point is everything you dreamed of — and more. This is a special corner of Washington, and we're so glad you're here to experience it.</p>
+      <div class="closing-contact">
+        <p style="font-size:11px; letter-spacing:3px; text-transform:uppercase; opacity:0.7; margin-bottom:10px; color:white;">Leave Us a Review</p>
+        <p>If you loved your stay, a review on <strong>Airbnb</strong> or <strong>VRBO</strong> means the world to us — we'd love to hear from you!</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<button class="print-btn no-print" onclick="window.print()">⬇ Print Booklet</button>
+
+</body>
+</html>
